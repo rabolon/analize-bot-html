@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="#" />
+  <title>Document</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+  <div id="plot"></div>
+
+  <script src="botTrailingBan.js"></script>
+  <debugging>
+
+  <script>
+    let x = tick;
+    let y1 = price;
+    let y2 = operations;
+
+    var trace1 = {
+      x: tick,
+      y: price,
+      name: 'prices',
+      type: 'scatter'
+    };
+
+    var trace2 = {
+      x: tick,
+      y: operations,
+      name: 'operations',
+      yaxis: 'y2',
+      type: 'scatter'
+    };
+
+    var data = [trace1, trace2];
+
+    var layout = {
+      title: 'Bot trailing and ban analyze',
+      yaxis: { title: 'asset prices' },
+      yaxis2: {
+        title: 'operations',
+        titlefont: { color: 'rgb(148, 103, 189)' },
+        tickfont: { color: 'rgb(148, 103, 189)' },
+        overlaying: 'y',
+        side: 'right'
+      }
+    };
+
+    Plotly.newPlot('plot', data, layout);
+
+
+
+
+  </script>
+</body>
+
+</html>
