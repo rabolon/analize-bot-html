@@ -5,10 +5,10 @@ for (let i = 0; i < tickLen; i++) {
 }
 
 const initPrice = 50000;
-const initAssetQty = 1;
+const initAssetQty = 0.001;
 let assetQty = initAssetQty;
 let baseQty = initAssetQty * initPrice;
-let assetStep = 0.02;
+let assetStep = 0.0002;
 const trailing = 0.02; //1%
 const trailingBan = 0.01 //0.2%
 
@@ -19,9 +19,9 @@ for (let i = 0; i < tickLen; i++) {
     price.push(initPrice);
   } else {
     price.push(price[i - 1] * (1 + (Math.random()*2-1)*0.3/100) ); // maxima variación por click +-0.3
-    //price.push(price[0] * (1 + 10/100*(Math.sin(100*2*Math.PI*i/tickLen)))); 
-    //price.push(price[0] * (1 + 10/100*(Math.sin(9*2*Math.PI*i/tickLen)) + 20/100*i/tickLen));
-    //price.push(price[0] * (1 + 10/100*(Math.sin(9*2*Math.PI*i/tickLen)) - 20/100*i/tickLen));
+    // price.push(price[0] * (1 + 10/100*(Math.sin(100*2*Math.PI*i/tickLen)))); 
+    // price.push(price[0] * (1 + 10/100*(Math.sin(100*2*Math.PI*i/tickLen)) + 20/100*i/tickLen));
+    // price.push(price[0] * (1 + 10/100*(Math.sin(100*2*Math.PI*i/tickLen)) - 20/100*i/tickLen));
   }
 }
 

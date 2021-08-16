@@ -1,9 +1,6 @@
 // bot trailing por % del price
-const plotlib = require('nodeplotlib');
-const { plot, stack, clear, Plot } = plotlib;
-
 const tick = [];
-tickLen = 1000;
+tickLen = 10000;
 for (let i = 0; i < tickLen; i++) {
   tick.push(i);
 }
@@ -84,14 +81,3 @@ const layout1 = {
   xaxis: { autorange: true, range: [0, 5000], title: 'ticks' },
   yaxis: { autorange: true, range: [0, 12000], title: 'price' }
 };
-
-const data2 = [{ x: tick, y: operations }];
-const layout2 = { 
-  margin: { r: 10, t: 25, b: 40, l: 60 },
-  xaxis: { autorange: true, range: [0, 5000], title: 'ticks' },
-  yaxis: { autorange: true, range: [0, 12000], title: 'operations' }
-};
-
-stack(data1, layout1);
-stack(data2, layout2);
-plot();
