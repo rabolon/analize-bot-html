@@ -76,7 +76,7 @@ function botTrailingBan(response) {
   let baseQty = initAssetQty * initPrice;
   let assetStep = 0.0002;
   const trailing = 0.01; //1%
-  const trailingBan = 0.01 //0.2%
+  const trailingBan = 0.01; //0.2%
 
   // // Price profile
   // const price = [];
